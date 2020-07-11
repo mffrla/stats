@@ -1,0 +1,235 @@
+﻿@{
+    ViewBag.Title = "Add";
+}
+
+<div class="container-fluid" ng-controller="addController as addVm">
+    <div class="row">
+        <!-- Start Form -->
+        <form class="form-horizontal">
+            <fieldset>
+                <legend>Add New Character</legend>
+                <!-- Start Basic Stats -->
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="col-md-6 control-label" for="name">Name</label>
+                        <div class="col-md-6">
+                            <input id="name" name="name" type="text" class="form-control input-md" ng-model="addVm.item.name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-6 control-label" for="type">Type</label>
+                        <div class="col-md-6">
+                            <select id="type" name="type" class="form-control" ng-model="addVm.item.typeId">
+                                <option value="1">Combat</option>
+                                <option value="2">Blast</option>
+                                <option value="3">Speed</option>
+                                <option value="4">Universal</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-6 control-label" for="gender">Gender</label>
+                        <div class="col-md-6">
+                            <select id="gender" name="gender" class="form-control" ng-model="addVm.item.genderId">
+                                <option value="1">Male</option>
+                                <option value="2">Female</option>
+                                <option value="3">Neutral</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-6 control-label" for="species">Species</label>
+                        <div class="col-md-6">
+                            <select id="species" name="species" class="form-control" ng-model="addVm.item.speciesId">
+                                <option value="1">Human</option>
+                                <option value="2">Inhuman</option>
+                                <option value="3">Mutant</option>
+                                <option value="4">Alien</option>
+                                <option value="5">Creature</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-6 control-label" for="side">Side</label>
+                        <div class="col-md-6">
+                            <select id="side" name="side" class="form-control" ng-model="addVm.item.sideId">
+                                <option value="1">Super Hero</option>
+                                <option value="2">Super Villain</option>
+                                <option value="3">Neutral</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-6 control-label" for="physicalAtk">Physical Attack</label>
+                        <div class="col-md-6">
+                            <input id="physicalAtk" name="physicalAtk" type="number" class="form-control input-md" ng-model="addVm.item.physicalAtk">
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-6 control-label" for="energyAtk">Energy Attack</label>
+                        <div class="col-md-6">
+                            <input id="energyAtk" name="energyAtk" type="number" class="form-control input-md" ng-model="addVm.item.energyAtk">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-6 control-label" for="physicalDef">Physical Defense</label>
+                        <div class="col-md-6">
+                            <input id="physicalDef" name="physicalDef" type="number" class="form-control input-md" ng-model="addVm.item.physicalDef">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-6 control-label" for="energyDef">Energy Defense</label>
+                        <div class="col-md-6">
+                            <input id="energyDef" name="energyDef" type="number" class="form-control input-md" ng-model="addVm.item.energyDef">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-6 control-label" for="hp">HP</label>
+                        <div class="col-md-6">
+                            <input id="hp" name="hp" type="number" class="form-control input-md" ng-model="addVm.item.hp">
+                        </div>
+                    </div>
+                </div>
+                <!-- End Basic Stats -->
+                <!-- Start Offense Stats -->
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="col-md-6 control-label" for="atkSpeed">Attack Speed</label>
+                        <div class="col-md-6">
+                            <input id="atkSpeed" name="atkSpeed" type="number" class="form-control input-md" ng-model="addVm.item.atkSpeed">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-6 control-label" for="critRate">Critical Rate</label>
+                        <div class="col-md-6">
+                            <input id="critRate" name="critRate" type="number" class="form-control input-md" ng-model="addVm.item.critRate">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-6 control-label" for="critDmg">Critical Damage</label>
+                        <div class="col-md-6">
+                            <input id="critDmg" name="critDmg" type="number" class="form-control input-md" ng-model="addVm.item.critDmg">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-6 control-label" for="ignoreDef">Ignore Defense</label>
+                        <div class="col-md-6">
+                            <input id="ignoreDef" name="ignoreDef" type="number" class="form-control input-md" ng-model="addVm.item.ignoreDef">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-6 control-label" for="ignoreDodge">Ignore Dodge</label>
+                        <div class="col-md-6">
+                            <input id="ignoreDodge" name="ignoreDodge" type="number" class="form-control input-md" ng-model="addVm.item.ignoreDodge">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-6 control-label" for="fireDmg">Fire Damage</label>
+                        <div class="col-md-6">
+                            <input id="fireDmg" name="fireDmg" type="number" class="form-control input-md" ng-model="addVm.item.fireDmg">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-6 control-label" for="coldDmg">Cold Damage</label>
+                        <div class="col-md-6">
+                            <input id="coldDmg" name="coldDmg" type="number" class="form-control input-md" ng-model="addVm.item.coldDmg">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-6 control-label" for="lightningDmg">Lightning Damage</label>
+                        <div class="col-md-6">
+                            <input id="lightningDmg" name="lightningDmg" type="number" class="form-control input-md" ng-model="addVm.item.lightningDmg">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-6 control-label" for="poisonDmg">Poison Damage</label>
+                        <div class="col-md-6">
+                            <input id="poisonDmg" name="poisonDmg" type="number" class="form-control input-md" ng-model="addVm.item.poisonDmg">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-6 control-label" for="mindDmg">Mind Damage</label>
+                        <div class="col-md-6">
+                            <input id="mindDmg" name="mindDmg" type="number" class="form-control input-md" ng-model="addVm.item.mindDmg">
+                        </div>
+                    </div>
+                </div>
+                <!-- End Offense Stats -->
+                <!-- Start Defense/Debuff Stats -->
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="col-md-6 control-label" for="recoveryRate">Recovery Rate</label>
+                        <div class="col-md-6">
+                            <input id="recoveryRate" name="recoveryRate" type="number" class="form-control input-md" ng-model="addVm.item.recoveryRate">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-6 control-label" for="dodge">Dodge</label>
+                        <div class="col-md-6">
+                            <input id="dodge" name="dodge" type="number" class="form-control input-md" ng-model="addVm.item.dodge">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-6 control-label" for="moveSpd">Movement Speed</label>
+                        <div class="col-md-6">
+                            <input id="moveSpd" name="moveSpd" type="number" class="form-control input-md" ng-model="addVm.item.moveSpd">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-6 control-label" for="debuff">Reduce Debuff Duration</label>
+                        <div class="col-md-6">
+                            <input id="debuff" name="debuff" type="number" class="form-control input-md" ng-model="addVm.item.debuff">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-6 control-label" for="skillCooldown">Reduce Cooldown Duration</label>
+                        <div class="col-md-6">
+                            <input id="skillCooldown" name="skillCooldown" type="number" class="form-control input-md" ng-model="addVm.item.skillCooldown">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-6 control-label" for="fireResist">Fire Resist</label>
+                        <div class="col-md-6">
+                            <input id="fireResist" name="fireResist" type="number" class="form-control input-md" ng-model="addVm.item.fireResist">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-6 control-label" for="coldResist">Cold Resist</label>
+                        <div class="col-md-6">
+                            <input id="coldResist" name="coldResist" type="number" class="form-control input-md" ng-model="addVm.item.coldResist">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-6 control-label" for="lightningResist">Lightning Resist</label>
+                        <div class="col-md-6">
+                            <input id="lightningResist" name="lightningResist" type="number" class="form-control input-md" ng-model="addVm.item.lightningResist">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-6 control-label" for="poisonResist">Poison Resist</label>
+                        <div class="col-md-6">
+                            <input id="poisonResist" name="poisonResist" type="number" class="form-control input-md" ng-model="addVm.item.poisonResist">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-6 control-label" for="mindResist">Mind Resist</label>
+                        <div class="col-md-6">
+                            <input id="mindResist" name="mindResist" type="number" class="form-control input-md" ng-model="addVm.item.mindResist">
+                        </div>
+                    </div>
+                </div>
+                <!-- End Defense/Debuff Stats -->
+            </fieldset>
+        </form>
+        <!-- End Form -->
+    </div>
+    <div class="row">
+        <button class="btn btn-info" type="button" ng-click="addVm.load()">Load Defaults</button>
+        <button class="btn btn-primary" type="button" ng-click="addVm.add()">Add Character</button>
+    </div>
+</div>
+
+@section scripts{
+    @Scripts.Render("~/bundles/add")
+}
